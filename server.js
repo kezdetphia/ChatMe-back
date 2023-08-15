@@ -18,15 +18,13 @@ const {
 const app = express();
 
 const { PORT, MONGO_URI, CLIENT_URL } = process.env;
-// const PORT = process.env.PORT;
-// const MONGO_URI = process.env.MONGO_URI;
-// const CLIENT_URL = process.env.CLIENT_URL;
+
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    // credentials: true,
+    credentials: true,
     origin: CLIENT_URL,
   })
 );
