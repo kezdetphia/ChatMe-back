@@ -24,12 +24,7 @@ const { PORT, MONGO_URI, CLIENT_URL } = process.env;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    credentials: true,
-    origin: CLIENT_URL,
-  })
-);
+app.use(cors());
 
 
 //routes
