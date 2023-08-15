@@ -29,6 +29,10 @@ app.use(
   })
 );
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://tiny-nasturtium-81e3e7.netlify.app');
+  next();
+});
 
 //routes
 app.get("/people", getAllUsers);
